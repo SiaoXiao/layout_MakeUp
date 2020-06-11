@@ -42,16 +42,11 @@ header .test .list li {
 header .test .list li a {
   text-decoration: none;
   color: white;
+  padding: 0 0 5px 0;
 }
 
-header .test .list li a:hover:after {
-  content: " ";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: #ee4036;
-  left: 0;
-  bottom: -10px;
+header .test .list li a:hover {
+  border-bottom: 2px solid #ee4036;
 }
 
 .banner {

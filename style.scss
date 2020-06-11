@@ -26,15 +26,10 @@ header {
                 a {
                     text-decoration: none;
                     color: white;
+                    padding: 0 0 5px 0;
                 }
-                a:hover:after {
-                    content: " ";
-                    position: absolute;
-                    width: 100%;
-                    height: 2px;
-                    background: #ee4036;
-                    left: 0;
-                    bottom: -10px;
+                a:hover{
+                    border-bottom: 2px solid #ee4036;
                 }
             }
         }

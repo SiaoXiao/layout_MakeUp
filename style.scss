@@ -24,13 +24,31 @@ header {
             li {
                 padding: 0 10px;
                 a {
+                    position: relative;
                     text-decoration: none;
                     color: white;
                     padding: 0 0 5px 0;
                 }
-                a:hover{
-                    border-bottom: 2px solid #ee4036;
+                a::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    display: block;
+                    width: 0;
+                    height: 3px;
+                    background-color: #ee4036;
+                    left: 50%;
+                    transition: all 0.3s linear;
                 }
+                a:hover::before {
+                    width: 100%;
+                    left: 0;
+                }
+            }
+        }
+        @media (max-width: 992px) {
+            .list {
+                display: none;
             }
         }
     }
@@ -44,6 +62,11 @@ header {
     .bannerImgBox {
         width: 50%;
         img {
+            width: 100%;
+        }
+    }
+    @media (max-width: 992px) {
+        .bannerImgBox {
             width: 100%;
         }
     }
@@ -79,9 +102,32 @@ header {
                 transition-duration: 0.5s;
             }
         }
+        @media (max-width: 992px) {
+            span {
+                margin: 50px 0;
+            }
+        }
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 60px;
+            }
+            p {
+                letter-spacing: 7px;
+            }
+        }
+    }
+    @media (max-width: 992px) {
+        .bannerTextBox {
+            width: 100%;
+            align-items: center;
+        }
     }
 }
-
+@media (max-width: 992px) {
+    .banner {
+        display: block;
+    }
+}
 main {
     background-color: #fff;
     padding: 50px;
@@ -102,27 +148,60 @@ main {
                 margin-right: 2%;
             }
         }
+        @media (max-width: 768px) {
+            .contentImgBox {
+                display: block;
+                img {
+                    width: 100%;
+                }
+                img:nth-child(1) {
+                    margin-right: 0;
+                    margin-bottom: 2%;
+                }
+            }
+        }
+
         .contentBtnBox {
             margin: 50px 0;
             span {
+                height: 100%;
                 a {
+                    display: inline-block;
                     font-size: 14px;
                     text-decoration: none;
                     color: black;
                     border: 1px solid #000;
                     padding: 12px;
                     border-right: 0px;
+                    height: 14px;
                 }
                 a:hover {
                     background-color: black;
                     color: white;
                     transition-duration: 0.5s;
                 }
+                @media (max-width: 576px) {
+                    a {
+                        width: 150px;
+                        border: 1px solid #000;
+                        text-align: center;
+                        margin-bottom: 10px;
+                    }
+                }
             }
             :last-child a {
                 border-right: 1px solid #000;
             }
         }
+
+        @media (max-width: 576px) {
+            .contentBtnBox {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
         .itemBox {
             display: flex;
             justify-content: space-around;
@@ -196,10 +275,12 @@ footer {
                 font-size: 16px;
                 color: white;
                 padding: 10px 0;
+                position: relative;
             }
             h2::after {
                 content: "";
                 display: block;
+                position: absolute;
                 width: 35px;
                 height: 2px;
                 margin-top: 8px;
@@ -211,6 +292,19 @@ footer {
                     font-size: 14px;
                     color: #666;
                     padding: 8px 0;
+                }
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        .footerContenBox {
+            display: block;
+            div {
+                display: block;
+                margin: 0;
+                text-align: center;
+                h2 {
+                    display: inline-block;
                 }
             }
         }
@@ -232,7 +326,6 @@ footer {
                 padding: 10px;
                 border: 1px solid #999;
                 border-right: 0;
-  
             }
             ::-webkit-input-placeholder {
                 color: #999;

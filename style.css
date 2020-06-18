@@ -25,11 +25,11 @@ header .header {
 }
 
 header .header .cover {
+  display: none;
   position: absolute;
+  padding: 44px 20px;
   z-index: 5;
-  height: 90px;
   width: 100%;
-  border: 1px solid #fff;
   background-color: #101010;
 }
 
@@ -99,6 +99,9 @@ header .header .list li a:hover::before {
   header .header {
     position: relative;
   }
+  header .header .cover {
+    display: block;
+  }
   header .header .list {
     z-index: 1;
     position: absolute;
@@ -135,8 +138,8 @@ header .header .list li a:hover::before {
   header .header .list.none {
     display: block;
     top: 100%;
-    -webkit-transition: all .5s linear;
-    transition: all .5s linear;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
   }
   header .header .menuBtn {
     display: -webkit-box;

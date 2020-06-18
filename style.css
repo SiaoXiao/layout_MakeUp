@@ -24,8 +24,19 @@ header .header {
   margin: 0 auto;
 }
 
+header .header .cover {
+  position: absolute;
+  z-index: 5;
+  height: 90px;
+  width: 100%;
+  border: 1px solid #fff;
+  background-color: #101010;
+}
+
 header .header .logoBox {
   padding: 20px 20px;
+  position: relative;
+  z-index: 10;
 }
 
 header .header .menuBtn {
@@ -52,6 +63,7 @@ header .header .list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 4;
 }
 
 header .header .list li {
@@ -85,9 +97,7 @@ header .header .list li a:hover::before {
 
 @media (max-width: 992px) {
   header .header {
-    z-index: 100;
     position: relative;
-    top: 0;
   }
   header .header .list {
     z-index: 1;
@@ -95,7 +105,6 @@ header .header .list li a:hover::before {
     width: 100%;
     top: -100%;
     left: 0;
-    padding: 15px 0;
     background-color: rgba(0, 0, 0, 0.9);
   }
   header .header .list li {
@@ -125,7 +134,7 @@ header .header .list li a:hover::before {
   }
   header .header .list.none {
     display: block;
-    top: 90%;
+    top: 100%;
     -webkit-transition: all .5s linear;
     transition: all .5s linear;
   }
@@ -134,6 +143,7 @@ header .header .list li a:hover::before {
     display: -ms-flexbox;
     display: flex;
     position: absolute;
+    z-index: 9;
     right: 0;
   }
 }

@@ -10,7 +10,7 @@ header {
   background-color: #101010;
 }
 
-header .test {
+header .header {
   max-width: 1100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24,11 +24,11 @@ header .test {
   margin: 0 auto;
 }
 
-header .test .logoBox {
+header .header .logoBox {
   padding: 20px 20px;
 }
 
-header .test .menuBtn {
+header .header .menuBtn {
   width: 90px;
   height: 90px;
   display: none;
@@ -42,30 +42,30 @@ header .test .menuBtn {
   cursor: pointer;
 }
 
-header .test .menuBtn img {
+header .header .menuBtn img {
   width: 45px;
   height: 45px;
 }
 
-header .test .list {
+header .header .list {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-header .test .list li {
+header .header .list li {
   padding: 0 10px;
 }
 
-header .test .list li a {
+header .header .list li a {
   position: relative;
   text-decoration: none;
   color: white;
   padding: 0 0 5px 0;
 }
 
-header .test .list li a::before {
+header .header .list li a::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -78,17 +78,17 @@ header .test .list li a::before {
   transition: all 0.3s linear;
 }
 
-header .test .list li a:hover::before {
+header .header .list li a:hover::before {
   width: 100%;
   left: 0;
 }
 
 @media (max-width: 992px) {
-  header .test {
+  header .header {
     position: relative;
   }
-  header .test .list {
-    display: block;
+  header .header .list {
+    display: none;
     position: absolute;
     width: 100%;
     top: 90px;
@@ -96,15 +96,20 @@ header .test .list li a:hover::before {
     padding: 15px 0;
     background-color: rgba(0, 0, 0, 0.9);
   }
-  header .test .list li {
+  header .header .list.none {
+    display: block;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+  }
+  header .header .list li {
     padding: 0;
   }
-  header .test .list li a {
+  header .header .list li a {
     padding: 14px 24px;
     display: block;
     position: relative;
   }
-  header .test .list li a::after {
+  header .header .list li a::after {
     content: "";
     position: absolute;
     border-top: 6px solid transparent;
@@ -114,14 +119,14 @@ header .test .list li a:hover::before {
     top: 15px;
     right: 10px;
   }
-  header .test .list li a::before {
+  header .header .list li a::before {
     -webkit-transition: none;
     transition: none;
   }
-  header .test .list li a:hover {
+  header .header .list li a:hover {
     background-color: #ed1c24;
   }
-  header .test .menuBtn {
+  header .header .menuBtn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

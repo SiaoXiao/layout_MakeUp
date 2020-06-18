@@ -63,6 +63,7 @@ header {
     @media (max-width: 992px) {
         .test {
             position: relative;
+
             .list {
                 display: block;
                 position: absolute;
@@ -96,11 +97,15 @@ header {
                     }
                 }
             }
+            .none{
+                display: none;
+            }
             .menuBtn {
                 display: flex;
                 position: absolute;
                 right: 0;
             }
+
         }
     }
 }

@@ -62,20 +62,19 @@ header {
     }
     @media (max-width: 992px) {
         .header {
+            z-index: 100;
             position: relative;
-
+            top: 0;
             .list {
-                display: none;
+                z-index: 1;
+                // display: none;
                 position: absolute;
                 width: 100%;
-                top: 90px;
+                top: -100%;
                 left: 0;
                 padding: 15px 0;
                 background-color: rgba(0, 0, 0, 0.9);
-                &.none{
-                    display: block;
-                    transition: all 1s;
-                }
+
                 li {
                     padding: 0;
                     a {
@@ -101,7 +100,12 @@ header {
                     }
                 }
             }
+            .list.none{
+                display: block;
+                top: 90%;
+                transition: all .5s linear;
 
+            }
             .menuBtn {
                 display: flex;
                 position: absolute;

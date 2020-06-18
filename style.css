@@ -85,21 +85,18 @@ header .header .list li a:hover::before {
 
 @media (max-width: 992px) {
   header .header {
+    z-index: 100;
     position: relative;
+    top: 0;
   }
   header .header .list {
-    display: none;
+    z-index: 1;
     position: absolute;
     width: 100%;
-    top: 90px;
+    top: -100%;
     left: 0;
     padding: 15px 0;
     background-color: rgba(0, 0, 0, 0.9);
-  }
-  header .header .list.none {
-    display: block;
-    -webkit-transition: all 1s;
-    transition: all 1s;
   }
   header .header .list li {
     padding: 0;
@@ -125,6 +122,12 @@ header .header .list li a:hover::before {
   }
   header .header .list li a:hover {
     background-color: #ed1c24;
+  }
+  header .header .list.none {
+    display: block;
+    top: 90%;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
   }
   header .header .menuBtn {
     display: -webkit-box;

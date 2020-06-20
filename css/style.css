@@ -12,6 +12,7 @@ header {
 
 header .header {
   max-width: 1100px;
+  width: 100;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,6 +38,7 @@ header .header .logoBox {
   padding: 20px 20px;
   position: relative;
   z-index: 10;
+  background-color: #101010;
 }
 
 header .header .menuBtn {
@@ -95,6 +97,14 @@ header .header .list li a:hover::before {
   left: 0;
 }
 
+header .header .list.none {
+  visibility: visible;
+  display: block;
+  top: 100%;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
 @media (max-width: 992px) {
   header .header {
     position: relative;
@@ -106,9 +116,11 @@ header .header .list li a:hover::before {
     z-index: 1;
     position: absolute;
     width: 100%;
-    top: -100%;
+    top: -130%;
     left: 0;
     background-color: rgba(0, 0, 0, 0.9);
+    visibility: hidden;
+    display: inline-block;
   }
   header .header .list li {
     padding: 0;
